@@ -1,0 +1,4 @@
+echo Все файлы MS Word:>doc.txt
+dir /b *.docx>>doc.txt
+echo Только чтение:>>doc.txt
+dir /b /A:R>>doc.txt

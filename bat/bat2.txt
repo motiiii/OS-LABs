@@ -1,0 +1,17 @@
+1. 
+@echo off
+FORFILES /s /c "cmd /c attrib -h @relpath"                        
+pause
+
+2. 
+@echo off
+FORFILES /s /c "cmd /c attrib -h @path"                      
+pause
+
+3. 
+@echo off
+set sum=0
+FOR /R %%i IN (*) do echo %%i 
+FOR /R %%i IN (*.*) do set /a sum += 1
+echo %sum%
+pause

@@ -1,0 +1,11 @@
+@echo off
+if [%1] == [] goto NOTPARAM
+if not exist %1 goto NOTFOUND
+attrib +h +r %1
+goto:EOF
+:NOTFOUND
+echo File %1 not exist
+goto:EOF
+:NOTPARAM
+echo Use in form: lab3.bat filename
+goto:EOF
