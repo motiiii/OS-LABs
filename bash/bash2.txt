@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for i in `ls -l`; do 
+    if [ -d  $i ] 
+    then
+    tar --remove-files -zcf $i.tar.gz $i 
+    fi
+done
+ls -t|tail -n +6|xargs -I x rm x
